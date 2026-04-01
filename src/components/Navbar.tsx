@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Smartphone } from 'lucide-react';
-import { cn } from '../utils/cn';
+import { cn } from '../lib/utils';
+import ThemeToggle from './ThemeToggle';
+import { DEVELOPER_NAME } from '../constants';
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -11,8 +13,6 @@ const navLinks = [
   { name: 'Services', href: '#services' },
   { name: 'Contact', href: '#contact' },
 ];
-
-import { DEVELOPER_NAME } from '../constants';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,6 +60,8 @@ export default function Navbar() {
               {link.name}
             </motion.a>
           ))}
+          <div className="h-6 w-px bg-slate-200 dark:bg-slate-700 mx-2" />
+          <ThemeToggle />
           <motion.a
             href="#contact"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -71,12 +73,15 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button
-          className="md:hidden p-2 text-slate-600 dark:text-slate-300"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X /> : <Menu />}
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <ThemeToggle />
+          <button
+            className="p-2 text-slate-600 dark:text-slate-300"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}

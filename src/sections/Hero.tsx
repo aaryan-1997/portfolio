@@ -84,7 +84,7 @@ export default function Hero() {
         >
           <div className="relative z-10 w-full max-w-md mx-auto aspect-square bg-gradient-to-br from-blue-600 to-indigo-700 rounded-[3rem] rotate-3 overflow-hidden shadow-2xl">
             <img
-              src={`${import.meta.env.BASE_URL}profile.jpg`}
+              src={`${import.meta.env.BASE_URL}/profile.jpg`}
               alt={DEVELOPER_NAME}
               className="w-full h-full object-cover -rotate-3 scale-110"
               referrerPolicy="no-referrer"

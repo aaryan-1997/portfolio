@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { cn } from '../utils/cn';
+import { cn } from '../lib/utils';
 
 interface SectionHeadingProps {
   title: string;

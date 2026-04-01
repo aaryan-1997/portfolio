@@ -7,6 +7,8 @@ export const SOCIAL_LINKS = {
   github: "https://github.com/aaryan-1997",
   linkedin: "https://www.linkedin.com/in/ram-niwas-singh-ab642a164/",
   email: "mailto:aryan9499@gmail.com",
+  whatsapp: "https://wa.me/919499000000", // Placeholder, user should update
+  telegram: "https://t.me/aaryan9499", // Placeholder
   resume: "#" // Placeholder until provided
 };
 
